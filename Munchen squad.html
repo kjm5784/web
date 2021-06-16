@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>FC 바이에른 뮌헨</title>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script>
+      $(document).ready(function () {
+          // 변수를 선언합니다.
+          var width = $('[data-role="slider"]').attr('data-width');
+          var height = $('[data-role="slider"]').attr('data-height');
+          var count = $('[data-role="slider"] div.item').length;
+          
+          // 스타일을 적용합니다.
+          $('[data-role="slider"]').css({
+              position: 'relative',
+              overflow: 'hidden',
+              width: width,
+              height: height
+          }).find('.container').css({
+              position: 'absolute',
+              width: count * width,
+              overflow: 'hidden'
+          }).find('.item').css({
+              width: width,
+              height: height,
+              float: 'left'
+          });
+          // 변수를 선언합니다.
+          var currentPage = 0;
+          var changePage = function () {
+              $('[data-role="slider"] > .container').animate({
+                  left: -currentPage * width
+              }, 500);
+          };
+          // 이벤트를 연결합니다.
+          $('#left-button').click(function () {
+              if (currentPage > 0) {
+                  // 왼쪽으로 이동
+                  currentPage = currentPage - 1;
+                  changePage();
+              }
+
+              else if(currentPage == 0) {
+                currentPage = count - 1;
+                changePage();
+              }
+          });
+
+          $('#right-button').click(function () {
+              if (currentPage < count - 1) {
+                  // 오른쪽으로 이동
+                  currentPage = currentPage + 1;
+                  changePage();
+              }
+             
+              else if(currentPage == count - 1){
+                currentPage = 0;
+                changePage();
+              }
+              
+          });
+      });
+  </script>
+
+<script>
+  $(document).ready(function () {
+      // 변수를 선언합니다.
+      var width = $('[data-role="slider"]').attr('data-width');
+      var height = $('[data-role="slider"]').attr('data-height');
+      var count = $('[data-role="slider"] div.item1').length;
+      
+      // 스타일을 적용합니다.
+      $('[data-role="slider"]').css({
+          position: 'relative',
+          overflow: 'hidden',
+          width: width,
+          height: height
+      }).find('.container1').css({
+          position: 'absolute',
+          width: count * width,
+          overflow: 'hidden'
+      }).find('.item1').css({
+          width: width,
+          height: height,
+          float: 'left'
+      });
+      // 변수를 선언합니다.
+      var currentPage = 0;
+      var changePage = function () {
+          $('[data-role="slider"] > .container1').animate({
+              left: -currentPage * width
+          }, 500);
+      };
+      // 이벤트를 연결합니다.
+      $('#left-button1').click(function () {
+          if (currentPage > 0) {
+              // 왼쪽으로 이동
+              currentPage = currentPage - 1;
+              changePage();
+          }
+
+          else if(currentPage == 0) {
+            currentPage = count - 1;
+            changePage();
+          }
+      });
+
+      $('#right-button1').click(function () {
+          if (currentPage < count - 1) {
+              // 오른쪽으로 이동
+              currentPage = currentPage + 1;
+              changePage();
+          }
+         
+          else if(currentPage == count - 1){
+            currentPage = 0;
+            changePage();
+          }
+          
+      });
+  });
+</script>
+
+</head>
+<body><img src="media/뮌헨 배경.png" width="100%" style="opacity: 70%; overflow: visible;">
+
+  <header style="left: 0%; top: 10%; position: absolute; height: 20%; width: 100%; background-color: #DC042D; text-align: center;">
+    <img src="media/뮌헨로고.png" width="100px" style="left: 15%; position: absolute; padding-top: 30px;">
+
+    <li style="display: inline-block; font-weight: bold; font-size: 25px; padding-left: 15%; padding-right: 5%; padding-top: 65px;">
+        <a style="text-decoration: none; color: white;" href="index.html">Main</a>
+    </li>
+    
+    <li style="display: inline-block; font-weight: bold; font-size: 25px;  padding-left: 5%; padding-right: 5%;">
+        <a style="text-decoration: none; color: white;" href="information.html">Information</a>
+    </li>
+
+    <li style="display: inline-block; font-weight: bold; font-size: 25px;  padding-left: 5%; padding-right: 5%;">
+        <a style="text-decoration: none; color: white;" href="Munchen squad.html">Squad</a>
+    </li>
+  </header>
+
+    <table style="left: 15%; top: 50%; width: 70%; position: absolute; border-collapse: collapse; border-color: #DC042D;" border="3px">
+      <thead>
+        <tr style="background: #DC042D; color: white; text-align: center; font-size: 25px;">
+          <th colspan="7">FC 바이에른 뮌헨 2020-21 스쿼드</th>
+        </tr>
+      </thead>
+      <tbody style="border-top: whitesmoke; border-bottom: whitesmoke;">
+        <tr style="background-color:white; color: #DC042D; text-align: center; font-size: 20px; font-weight: bold;">
+          <td style="width: 10%;">No.</td>
+          <td style="width: 10%;">국적</td>
+          <td style="width: 10%">포지션</td>
+          <td style="width: 40%">이름</td>
+          <td style="width: 10%;">생년 월일</td>
+          <td style="width: 10%;">계약 년도</td>
+          <td style="width: 10%;">계약 만료</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>1</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>GK</td>
+          <td>마누엘 노이어</td>
+          <td>1986.03.27</td>
+          <td>2011</td>
+          <td>2023</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>3</td>
+          <td><img src="media/flag/잉글랜드.png" width="30px" height="30px" title="잉글랜드"></td>
+          <td>DF</td>
+          <td>오마르 리차즈</td>
+          <td>1998.02.15</td>
+          <td>2021</td>
+          <td>2025</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>4</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>DF</td>
+          <td>니클라스 쥘레</td>
+          <td>1995.09.03</td>
+          <td>2017</td>
+          <td>2022</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>5</td>
+          <td><img src="media/flag/프랑스.png" width="30px" height="30px" title="프랑스"></td>
+          <td>DF</td>
+          <td>뱅자맹 파바르</td>
+          <td>1996.03.28</td>
+          <td>2019</td>
+          <td>2024</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>6</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>DF</td>
+          <td>요주아 키미히</td>
+          <td>1995.02.08</td>
+          <td>2015</td>
+          <td>2023</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>7</td>
+          <td>
+            <img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>FW</td>
+          <td>세르주 그나브리</td>
+          <td>1995.07.14</td>
+          <td>2017</td>
+          <td>2023</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>8</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>MF</td>
+          <td>레온 고레츠카</td>
+          <td>1995.06.02</td>
+          <td>2018</td>
+          <td>2022</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>9</td>
+          <td><img src="media/flag/폴란드.png" width="30px" height="30px" title="폴란드"></td>
+          <td>FW</td>
+          <td>로베르트 레반도프스키</td>
+          <td>1988.08.21</td>
+          <td>2014</td>
+          <td>2023</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>10</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>FW</td>
+          <td>리로이 자네</td>
+          <td>1996.01.11</td>
+          <td>2020</td>
+          <td>2025</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>13</td>
+          <td><img src="media/flag/카메룬.png" width="30px" height="30px" title="카메룬"></td>
+          <td>FW</td>
+          <td>에릭 막심 추포모팅</td>
+          <td>11989.03.23</td>
+          <td>2020</td>
+          <td>2021</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>19</td>
+          <td><img src="media/flag/캐나다.png" width="30px" height="30px" title="캐나다"></td>
+          <td>DF</td>
+          <td>알폰소 데이비스</td>
+          <td>2000.11.02</td>
+          <td>2018</td>
+          <td>2025</td>
+        </tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>20</td>
+          <td><img src="media/flag/프랑스.png" width="30px" height="30px" title="프랑스"></td>
+          <td>DF</td>
+          <td>부나 사르</td>
+          <td>1992.01.31</td>
+          <td>2020</td>
+          <td>2024</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>21</td>
+          <td><img src="media/flag/프랑스.png" width="30px" height="30px" title="프랑스"></td>
+          <td>DF</td>
+          <td>뤼카 에르난데스</td>
+          <td>1996.02.14</td>
+          <td>2019</td>
+          <td>2024</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>22</td>
+          <td><img src="media/flag/스페인.png" width="30px" height="30px" title="스페인"></td>
+          <td>MF</td>
+          <td>마르크 로카</td>
+          <td>1996.11.26</td>
+          <td>2020</td>
+          <td>2025</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>23</td>
+          <td><img src="media/flag/프랑스.png" width="30px" height="30px" title="프랑스"></td>
+          <td>DF</td>
+          <td>탕기 쿠아시</td>
+          <td>2002.06.07</td>
+          <td>2020</td>
+          <td>2024</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>24</td>
+          <td><img src="media/flag/프랑스.png" width="30px" height="30px" title="프랑스"></td>
+          <td>MF</td>
+          <td>코아탱 톨리소</td>
+          <td>1994.08.03</td>
+          <td>2017</td>
+          <td>2022 </td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>25</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>FW</td>
+          <td>토마스 뮐러</td>
+          <td>1989.09.13</td>
+          <td>2008</td>
+          <td>2023</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>29</td>
+          <td><img src="media/flag/프랑스.png" width="30px" height="30px" title="프랑스"></td>
+          <td>FW</td>
+          <td>킹슬리 코망</td>
+          <td>2000.11.02</td>
+          <td>2018</td>
+          <td>2025</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>32</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>MF</td>
+          <td>크리스토퍼 스캇</td>
+          <td>2002.06.07</td>
+          <td colspan="2">2군에서 콜업</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>35</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>GK</td>
+          <td>알렉산더 뉘벨</td>
+          <td>1996.09.30</td>
+          <td>2020</td>
+          <td>2025</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>39</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>GK</td>
+          <td>론토르벤 호프만</td>
+          <td>1999.04.04</td>
+          <td>2018</td>
+          <td>2021</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>42</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>MF</td>
+          <td>자말 무시알라</td>
+          <td>2003.02.26</td>
+          <td>2020</td>
+          <td>2026</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>43</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>DF</td>
+          <td>브라이트 아레이음비</td>
+          <td>2000.04.02</td>
+          <td colspan="2">2군에서 콜업</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>44</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>DF</td>
+          <td>요시프 스타니시치</td>
+          <td>2003.02.26</td>
+          <td colspan="2">2군에서 콜업</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>49</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>DF</td>
+          <td>막시밀리안 차이저</td>
+          <td>1999.03.08</td>
+          <td colspan="2">2군에서 콜업</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>-</td>
+          <td><img src="media/flag/프랑스.png" width="30px" height="30px" title="프랑스"></td>
+          <td>DF</td>
+          <td>다요 우파메카노</td>
+          <td>1998.10.27</td>
+          <td>2021</td>
+          <td>2026</td>
+        </tr>
+        <tr>
+          <td colspan="7" style="text-align: center; background-color: white;">
+            <div data-role="slider" data-width="1000" data-height="600">
+              <div class="container">
+                <div class="item">
+                  <img src="media/player/마누엘 노이어.png" height="540">
+                  <h2>마누엘 노이어</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/오마르 리차즈.jpg" height="540">
+                  <h2>오마르 리차즈</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/니클라스 쥘레.png" height="540">
+                  <h2>니클라스 쥘레</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/뱅자맹 파바르.png" height="540">
+                  <h2>뱅자맹 파바르</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/요주아 키미히.png" height="540">
+                  <h2>요주아 키미히</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/세르주 그나브리.png" height="540">
+                  <h2>세르주 그나브리</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/레온 고레츠카.png" height="540">
+                  <h2>레온 고레츠카</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/로베르트 레반도프스키.png" height="540">
+                  <h2>로베르트 레반도프스키</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/리로이 자네.png" height="540">
+                  <h2>리로이 자네</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/에릭 막심 추포모팅.png" height="540">
+                  <h2>에릭 막심 추포모팅</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/알폰소 데이비스.png" height="540">
+                  <h2>알폰소 데이비스</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/부나 사르.png" height="540">
+                  <h2>부나 사르</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/뤼카 에르난데스.png" height="540">
+                  <h2>뤼카 에르난데스</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/마르크 로카.png" height="540">
+                  <h2>마르크 로카</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/탕기 쿠아시.png" height="540">
+                  <h2>탕기 쿠아시</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/코아탱 톨리소.png" height="540">
+                  <h2>코아탱 톨리소</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/토마스 뮐러.png" height="540">
+                  <h2>토마스 뮐러</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/킹슬리 코망.png" height="540">
+                  <h2>킹슬리 코망</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/크리스토퍼 스캇" height="540">
+                  <h2>크리스토퍼 스캇</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/알렉산더 뉘벨.png" height="540">
+                  <h2>알렉산더 뉘벨</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/론토르벤 호프만.png" height="540">
+                  <h2>론토르벤 호프만</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/자말 무시알라.png" height="540">
+                  <h2>자말 무시알라</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/브라이트 아레이음비.png" height="540">
+                  <h2>브라이트 아레이음비</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/요시프 스타니시치.jpg" height="540">
+                  <h2>요시프 스타니시치</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/막시밀리안 차이저.jpg" height="540">
+                  <h2>막시밀리안 차이저</h2>
+                </div>
+                <div class="item">
+                  <img src="media/player/다요 우파메카노" height="540">
+                  <h2>다요 우파메카노</h2>
+                </div>
+              </div>
+            </div>
+            <button id="left-button">←</button>
+            <button id="right-button">→</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table style="left: 15%; top:265%; width: 70%; position: absolute; border-collapse: collapse; border-color: #DC042D;" border="3px">
+      <thead>
+        <tr style="background: #DC042D; color: white; text-align: center; font-size: 25px;">
+          <th colspan="5">FC 바이에른 뮌헨 2020-21 시즌 임대 선수</th>
+        </tr>
+      </thead>
+      <tbody style="border-top: whitesmoke; border-bottom: whitesmoke;">
+        <tr style="background-color:white; color: #DC042D; text-align: center; font-size: 20px; font-weight: bold;">
+          <td style="width: 10%;">No.</td>
+          <td style="width: 10%;">국적</td>
+          <td style="width: 10%">포지션</td>
+          <td style="width: 40%">이름</td>
+          <td style="width: 30%;">임대 구단</td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>33</td>
+          <td>
+            <img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>FW</td>
+          <td>라르스 루카스 마이</td>
+          <td>
+            <a href="https://namu.wiki/w/SV%20%EB%8B%A4%EB%A6%84%EC%8A%88%ED%83%80%ED%8A%B8%2098" style="text-decoration: none;" target="_blank">
+              1SV 다름슈타트 98</a></td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>36</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>GK</td>
+          <td>크리스티안 프뤼히틀</td>
+          <td>
+            <a href="https://namu.wiki/w/1.%20FC%20%EB%89%98%EB%A5%B8%EB%B2%A0%EB%A5%B4%ED%81%AC" style="text-decoration: none;" target="_blank">
+              1. FC 뉘른베르크</a></td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>34</td>
+          <td><img src="media/flag/브라질.png" width="30px" height="30px" title="브라질"></td>
+          <td>MF</td>
+          <td>올리버 바티스타 마이어</td>
+          <td>
+            <a href="https://namu.wiki/w/SC%20%ED%97%A4%EC%9D%B4%EB%A0%8C%EB%B2%A0%EC%9D%B8" style="text-decoration: none;" target="_blank">
+              SC 헤이렌베인</a></td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>11</td>
+          <td><img src="media/flag/프랑스.png" width="30px" height="30px" title="프랑스"></td>
+          <td>MF</td>
+          <td>미카엘 퀴장스</td>
+          <td>
+            <a href="https://namu.wiki/w/%EC%98%AC%EB%9E%AD%ED%94%BC%ED%81%AC%20%EB%93%9C%20%EB%A7%88%EB%A5%B4%EC%84%B8%EC%9C%A0" style="text-decoration: none;" target="_blank">
+              올랭피크 드 마르세유</a></td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>30</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>MF</td>
+          <td>아드리안 파인</td>
+          <td>
+            <a href="https://namu.wiki/w/PSV%20%EC%97%90%EC%9D%B8%ED%8A%B8%ED%98%B8%EB%B2%88" style="text-decoration: none;" target="_blank">
+              PSV 에인트호번</a></td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>45</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>FW</td>
+          <td>레온 다야쿠</td>
+          <td>
+            <a href="https://namu.wiki/w/1.%20FC%20%EC%9A%B0%EB%8B%88%EC%98%A8%20%EB%B2%A0%EB%A5%BC%EB%A6%B0" style="text-decoration: none;" target="_blank">
+              1. FC 우니온 베를린</a></td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>41</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>DF</td>
+          <td>크리스 리차즈</td>
+          <td>
+            <a href="https://namu.wiki/w/TSG%201899%20%ED%98%B8%ED%8E%9C%ED%95%98%EC%9E%84" style="text-decoration: none;" target="_blank">
+              TSG 1899 호펜하임</a></td>
+        </tr>
+        <tr style="background-color:white; color: black; text-align: center; font-size: 15px;">
+          <td>14</td>
+          <td><img src="media/flag/독일.png" width="30px" height="30px" title="독일"></td>
+          <td>FW</td>
+          <td>조슈아 지르크제이</td>
+          <td>
+            <a href="https://namu.wiki/w/%ED%8C%8C%EB%A5%B4%EB%A7%88%20%EC%B9%BC%EC%B4%88%201913" style="text-decoration: none;" target="_blank">
+              파르마 칼초 1913</a></td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: center; background-color: white;">
+            <div data-role="slider" data-width="1000" data-height="600">
+              <div class="container1">
+                <div class="item1">
+                  <img src="media/player/라르스 루카스 마이.png" height="540">
+                  <h2>라르스 루카스 마이</h2>
+                </div>
+                <div class="item1">
+                  <img src="media/player/크리스티안 프뤼히틀.png" height="540">
+                  <h2>크리스티안 프뤼히틀</h2>
+                </div>
+                <div class="item1">
+                  <img src="media/player/올리버 바티스타 마이어.jpg" height="540">
+                  <h2>올리버 바티스타 마이어</h2>
+                </div>
+                <div class="item1">
+                  <img src="media/player/미카엘 퀴장스.jpg" height="540">
+                  <h2>미카엘 퀴장스</h2>
+                </div>
+                <div class="item1">
+                  <img src="media/player/아드리안 파인.png" height="540">
+                  <h2>아드리안 파인</h2>
+                </div>
+                <div class="item1">
+                  <img src="media/player/레온 다야쿠.png" height="540">
+                  <h2>마누엘 노이어</h2>
+                </div>
+                <div class="item1">
+                  <img src="media/player/크리스 리차즈.png" height="540">
+                  <h2>크리스 리차즈</h2>
+                </div>
+                <div class="item1">
+                  <img src="media/player/조슈아 지르크제이.jpg" height="540">
+                  <h2>조슈아 지르크제이</h2>
+                </div>
+              </div>
+            </div>
+            <button id="left-button1">←</button>
+            <button id="right-button1">→</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>
